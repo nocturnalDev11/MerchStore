@@ -1,0 +1,18 @@
+@page "/checkout"
+
+<h2 class="text-2xl font-semibold mb-4">Checkout</h2>
+
+<form class="space-y-4">
+    <input type="text" placeholder="Full Name" class="border p-2 w-full" />
+    <input type="text" placeholder="Shipping Address" class="border p-2 w-full" />
+    <input type="text" placeholder="Credit Card Number" class="border p-2 w-full" />
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded" @onclick="SubmitOrder">Place Order</button>
+</form>
+
+@code {
+    void SubmitOrder()
+    {
+        NavigationManager.NavigateTo("/confirmation");
+    }
+    [Inject] NavigationManager NavigationManager { get; set; }
+}

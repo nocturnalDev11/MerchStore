@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MerchStore</title>
+    <base href="/" />
+    <!-- <link rel="stylesheet" href="css/app.css" /> -->
+    <link href="css/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="MerchStore.styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="h-screen flex items-center justify-center flex-col gap-4">
+            <!-- Spinner -->
+            <svg class="w-16 h-16 animate-spin text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+            
+            <!-- Loading Text -->
+            <div class="text-lg font-semibold text-blue-700 loading-progress-text">Loading...</div>
+        </div>
+    </div>
+    
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
