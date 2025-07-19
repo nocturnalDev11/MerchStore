@@ -1,0 +1,6 @@
+# .NET build folders
+bin/
+obj/
+
+# Node.js packages
+node_modules/

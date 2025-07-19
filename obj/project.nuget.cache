@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yKloLI4ph2xT54uGA5eKM+m5Yob9yNgOm3liq2IDkfopqP8PmQK4/PlaVi78KCvqHImeytP/WnP0ohY4EP7xzA==",
+  "dgSpecHash": "YmY722pFlRCJOcVXZfzX/eG3UnSMfZ/d1aPej+bLzyBWzKDvjlx9xgvT5BBk2+R4yhCRic9kj6aWCZ2NuiLwPg==",
   "success": true,
   "projectFilePath": "/home/lutrezehuejacinto/Projects/MerchStore/MerchStore.csproj",
   "expectedPackageFiles": [
@@ -29,9 +29,9 @@
     "/home/lutrezehuejacinto/.nuget/packages/microsoft.jsinterop/8.0.17/microsoft.jsinterop.8.0.17.nupkg.sha512",
     "/home/lutrezehuejacinto/.nuget/packages/microsoft.jsinterop.webassembly/8.0.17/microsoft.jsinterop.webassembly.8.0.17.nupkg.sha512",
     "/home/lutrezehuejacinto/.nuget/packages/microsoft.net.illink.tasks/8.0.17/microsoft.net.illink.tasks.8.0.17.nupkg.sha512",
-    "/home/lutrezehuejacinto/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.17/microsoft.net.sdk.webassembly.pack.8.0.17.nupkg.sha512",
+    "/home/lutrezehuejacinto/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.18/microsoft.net.sdk.webassembly.pack.8.0.18.nupkg.sha512",
     "/home/lutrezehuejacinto/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
-    "/home/lutrezehuejacinto/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.17/microsoft.netcore.app.runtime.mono.browser-wasm.8.0.17.nupkg.sha512"
+    "/home/lutrezehuejacinto/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.18/microsoft.netcore.app.runtime.mono.browser-wasm.8.0.18.nupkg.sha512"
   ],
   "logs": []
 }
