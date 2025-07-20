@@ -1,0 +1,205 @@
+@page "/order-tracking"
+
+<section class="py-10 relative">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="w-full flex-col justify-start items-start lg:gap-10 gap-8 inline-flex">
+            <h2 class="text-center text-black text-3xl font-bold font-manrope leading-normal">Order Tracking</h2>
+            <div class="w-full flex-col justify-start items-start gap-3 flex">
+                <h3 class="text-gray-900 text-2xl font-semibold font-manrope leading-9">Order Details:
+                    <span class="font-medium ">#1025400025</span>
+                </h3>
+                <h4 class="text-gray-600 text-xl font-medium leading-loose">Date: 10-04-2024</h4>
+            </div>
+            <div class="w-full flex-col justify-center sm:items-center items-start gap-8 flex">
+                <ol class="flex sm:items-center items-start w-full sm:gap-0 gap-3">
+                    <li
+                        class="flex w-full relative justify-center text-orange-600 text-base font-semibold after:content-['']  after:w-full after:h-0.5 after:border after:border-dashed after:bg-orange-600 after:inline-block after:absolute lg:after:top-5 after:top-3 xl:after:left-52 lg:after:left-48 md:after:left-36 sm:after:left-28 after:left-20">
+                        <div class="block sm:whitespace-nowrap z-10 flex flex-col items-center">
+                            <span
+                                class="w-6 h-6 bg-orange-600 text-center border-2 border-transparent rounded-full flex justify-center items-center mx-auto mb-1 text-base font-bold text-white lg:w-10 lg:h-10">1</span>
+                            Order Confirmed <br>
+                            <span class="text-orange-600 text-base font-normal text-center">8:00 AM, July
+                            8,2025</span>
+                        </div>
+                    </li>
+                    <li
+                        class="flex w-full relative justify-center text-orange-600 text-base font-semibold after:content-['']  after:w-full after:h-0.5 after:border after:border-dashed after:bg-orange-200 after:inline-block after:absolute lg:after:top-5 after:top-3 xl:after:left-52 lg:after:left-48 md:after:left-36 sm:after:left-28 after:left-20">
+                        <div class="block sm:whitespace-nowrap z-10 flex flex-col items-center">
+                            <span
+                                class="w-6 h-6 bg-orange-600 rounded-full flex justify-center items-center mx-auto mb-1 text-white text-base font-bold lg:w-10 lg:h-10">2</span>
+                            Shipping
+                            <span class="text-orange-600 text-base font-normal text-center">Shipped with LalaStop</span>
+                        </div>
+                    </li>
+                    <li class="flex w-full relative justify-center text-gray-500 text-base font-semibold">
+                        <div class="block sm:whitespace-nowrap z-10 flex flex-col items-center">
+                            <span
+                                class="w-6 h-6 text-orange-600 border-2 bg-transparent border-orange-600 rounded-full flex justify-center items-center mx-auto mb-1 text-sm lg:w-10 lg:h-10">3</span>
+                            To Deliver
+                            <span class="text-gray-500 text-base font-normal text-center">Estimated date: July 21
+                            </span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="w-full flex-col justify-start items-start gap-8 flex">
+                <div class="w-full justify-start items-start lg:gap-8 gap-4 flex sm:flex-row flex-col">
+                    <div class="w-full flex-col justify-start items-start flex gap-1.5">
+                        <label class="text-gray-600 text-base font-medium leading-relaxed">Courier Name</label>
+                        <input type="text"
+                            class="w-full focus:outline-none px-5 py-3 h-14 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed"
+                            placeholder="LalaStop Express">
+                    </div>
+                    <div class="w-full flex-col justify-start items-start flex gap-1.5">
+                        <label class="text-gray-600 text-base font-medium leading-relaxed">Tracking Number</label>
+                        <input type="text"
+                            class="w-full focus:outline-none px-5 py-3 h-14 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed"
+                            placeholder="#125410215452">
+                    </div>
+                </div>
+                <div class="w-full flex-col justify-start items-start flex gap-1.5">
+                    <label class="text-gray-600 text-base font-medium leading-relaxed">Shipment tracking URL</label>
+                    <input type="text"
+                        class="w-full focus:outline-none px-5 py-3 h-14 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed"
+                        placeholder="https://www.lalastop.com/TDB1_CargoTracking/">
+                </div>
+            </div>
+            <div class="w-full flex-col justify-start items-start gap-7 flex">
+                <h3 class="text-teal-600 text-2xl font-semibold font-manrope leading-9">Item Ordered</h3>
+                <div class="w-full justify-start items-start flex flex-col">
+                    <div class="w-full hidden lg:grid grid-cols-2 p-4 bg-gray-50">
+                        <span class="text-gray-500 text-base font-normal leading-relaxed">Product</span>
+                        <p
+                            class="text-gray-500 text-base font-normal leading-relaxed flex items-center justify-between">
+                            <span class="w-full max-w-[300px] text-center pl-5">Quantity</span>
+                            <span class="w-full max-w-[300px] text-center pl-10">Price</span>
+                            <span class="w-full max-w-[105px] text-center"></span>
+                        </p>
+                    </div>
+                    <div
+                        class="w-full grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6 py-3 border-b border-gray-200 max-lg:max-w-xl max-xl:mx-auto">
+                        <div
+                            class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-4 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
+                            <img src="images/shirt-7.webp" alt="Simple Black T-shirt image"
+                                class="w-[120px] rounded-xl object-cover">
+                            <div
+                                class="pro-data w-full max-w-sm flex-col justify-start items-start gap-2 inline-flex">
+                                <h4
+                                    class="w-full text-black text-lg font-medium leading-relaxed max-[550px]:text-center">
+                                    Software Engineer Shirt
+                                </h4>
+                                <h5
+                                    class="w-full text-gray-500 text-base font-normal leading-relaxed min-[550px]:my-0 my-2 max-[550px]:text-center">
+                                    Product ID: 4553458120
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
+                            <button class="max-w-[300px] flex items-center w-full mx-0 justify-center gap-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round">
+                                    </path>
+                                </svg>
+                                <input type="text"
+                                    class="w-11 h-11 focus:outline-none text-gray-900 placeholder-gray-900 text-lg font-medium leading-8 px-2.5 bg-white rounded-full border border-gray-200 justify-center items-center flex"
+                                    placeholder="01">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M12 6V18M18 12H6" stroke="#111827" stroke-width="1.6"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            <h4
+                                class="max-w-[300px] w-full text-center text-green-600 text-lg font-medium leading-relaxed pl-5">
+                                ₱549.00
+                            </h4>
+                            <button class="max-w-[105px] text-center w-full ">
+                                <svg class="text-gray-500 hover:text-gray-800 transition-all duration-700 ease-in-out mx-auto"
+                                    xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26"
+                                    fill="none">
+                                    <path d="M7 6.5L20 19.5M20 6.5L7 19.5" stroke="currentColor" stroke-width="1.6"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6 py-3 border-b border-gray-200 max-lg:max-w-xl max-xl:mx-auto">
+                        <div
+                            class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-4 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
+                            <img src="images/shirt-1.webp" alt="Simple Black T-shirt image"
+                                class="w-[120px] rounded-xl object-cover">
+                            <div
+                                class="pro-data w-full max-w-sm flex-col justify-start items-start gap-2 inline-flex">
+                                <h4
+                                    class="w-full text-black text-lg font-medium leading-relaxed max-[550px]:text-center">
+                                    Software Developer Shirt
+                                </h4>
+                                <h5
+                                    class="w-full text-gray-500 text-base font-normal leading-relaxed min-[550px]:my-0 my-2 max-[550px]:text-center">
+                                    Product ID: 8953458747
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
+                            <button class="max-w-[300px] flex items-center w-full mx-0 justify-center gap-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round">
+                                    </path>
+                                </svg>
+                                <input type="text"
+                                    class="w-11 h-11 focus:outline-none text-gray-900 placeholder-gray-900 text-lg font-medium leading-8 px-2.5 bg-white rounded-full border border-gray-200 justify-center items-center flex"
+                                    placeholder="01">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M12 6V18M18 12H6" stroke="#111827" stroke-width="1.6"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            <h4
+                                class="max-w-[300px] w-full text-center text-green-600 text-lg font-medium leading-relaxed pl-5">
+                                ₱499.00
+                            </h4>
+                            <button class="max-w-[105px] text-center w-full ">
+                                <svg class="text-gray-500 hover:text-gray-800 transition-all duration-700 ease-in-out mx-auto"
+                                    xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26"
+                                    fill="none">
+                                    <path d="M7 6.5L20 19.5M20 6.5L7 19.5" stroke="currentColor" stroke-width="1.6"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full rounded-xl flex-col justify-start items-start gap-6 flex">
+                <div class="w-full pb-6 border-b border-gray-200 flex-col justify-start items-start gap-6 flex">
+                    <div class="w-full justify-between items-start gap-6 inline-flex">
+                        <h4 class="text-gray-500 text-xl font-normal leading-8">Subtotal</h4>
+                        <h4 class="text-right text-gray-900 text-xl font-semibold leading-8">₱1,048.00</h4>
+                    </div>
+                    <div class="w-full justify-between items-start gap-6 inline-flex">
+                        <h4 class="text-gray-500 text-xl font-normal leading-8">Shipping Charge</h4>
+                        <h4 class="text-right text-gray-900 text-xl font-semibold leading-8">₱20.00</h4>
+                    </div>
+                    <div class="w-full justify-between items-start gap-6 inline-flex">
+                        <h4 class="text-gray-500 text-xl font-normal leading-8">Taxes</h4>
+                        <h4 class="text-right text-gray-900 text-xl font-semibold leading-8">₱22.00</h4>
+                    </div>
+                    <div class="w-full justify-between items-start gap-6 inline-flex">
+                        <h4 class="text-gray-500 text-xl font-normal leading-8">Discount</h4>
+                        <h4 class="text-right text-red-600 text-xl font-semibold leading-8">-₱12.00</h4>
+                    </div>
+                </div>
+                <div class="w-full pb-6 border-b border-gray-200 justify-between items-start gap-6 inline-flex">
+                    <h3 class="text-gray-900 text-2xl font-semibold font-manrope leading-9">Total</h3>
+                    <h3 class="text-right text-green-600 text-2xl font-bold font-manrope leading-9">₱1,078.00</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

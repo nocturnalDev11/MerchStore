@@ -1,4 +1,91 @@
 @page "/confirmation"
 
-<h2 class="text-2xl font-bold text-green-600 mb-4">Order Confirmed!</h2>
-<p>Thank you for purchasing. Your personalized shirt will be delivered nationwide 🚚</p>
+<section class="py-10 relative">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="w-full flex-col justify-start items-center lg:gap-12 gap-8 inline-flex">
+            <div class="flex-col justify-start items-center gap-3 flex">
+                <h2 class="text-center text-gray-900 text-3xl font-bold font-manrope leading-normal">Lutreze, Thank You for Your Order!</h2>
+                <p class="max-w-xl text-center text-gray-500 text-lg font-normal leading-8">Your order is in good hands! We'll notify you once it's en route. For now, here's a snapshot of your purchase</p>
+            </div>
+            <div class="w-full flex-col justify-start items-center lg:gap-10 gap-8 flex">
+                <div class="w-full flex-col justify-start items-start gap-6 flex">
+                    <div class="w-full flex-col justify-start items-start gap-5 flex">
+                        <div class="w-full md:px-6 px-2 py-4 border-y border-gray-200 justify-between items-center inline-flex">
+                            <h3 class="text-gray-900 text-xl font-medium leading-8">Item</h3>
+                            <h3 class="text-right text-gray-900 text-xl font-medium leading-8">Total</h3>
+                        </div>
+                        <div class="w-full md:px-6 px-2 pb-5 justify-between items-center gap-8 inline-flex border-b border-gray-300">
+                            <div class="justify-start items-center gap-6 flex md:pb-5">
+                                <img class="object-cover w-20 h-20" src="images/shirt-7.webp" alt="Simple Black T-shirt image" />
+                                <div class="flex-col justify-start items-start gap-1.5 inline-flex">
+                                    <h5 class="text-gray-900 text-lg font-semibold leading-relaxed">Software Engineer Shirt</h5>
+                                    <h6 class="text-gray-500 text-base font-normal leading-relaxed">QTY: 1</h6>
+                                </div>
+                            </div>
+                            <h4 class="text-right text-gray-900 text-lg font-medium leading-relaxed">₱549.00</h4>
+                        </div>
+                        <div class="w-full md:px-5 px-2 pb-6 justify-between items-center gap-8 inline-flex border-b border-gray-300">
+                            <div class="justify-start items-center gap-6 flex md:pb-6">
+                                <img class="object-cover w-20 h-20" src="images/shirt-1.webp" alt="Simple Black T-shirt image" />
+                                <div class="flex-col justify-start items-start gap-1.5 inline-flex">
+                                    <h4 class="text-gray-900 text-xl font-medium leading-8">Software Developer Shirt</h4>
+                                    <h6 class="text-gray-500 text-base font-normal leading-relaxed">QTY : 1</h6>
+                                </div>
+                            </div>
+                            <h4 class="text-right text-gray-900 text-lg font-medium leading-relaxed">₱499.00</h4>
+                        </div>
+                    </div>
+                    <div class="w-full md:pt-6 justify-start items-center gap-5 flex md:flex-row flex-col">
+                        <div class="w-full md:px-6 px-2 flex-col justify-start items-start gap-5 inline-flex md:border-r md:border-b-0 border-b md:pb-0 pb-5 border-gray-200">
+                            <div class="w-full justify-between items-center inline-flex gap-4">
+                                <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Estimated Delivery:</h5>
+                                <h5 class="text-right text-gray-500 text-lg font-normal leading-relaxed">Monday, 21st July 2025</h5>
+                            </div>
+                            <div class="w-full justify-between items-center inline-flex gap-4 border-y border-gray-200 py-5">
+                                <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Delivery Address:</h5>
+                                <h5 class="text-right text-gray-500 text-lg font-normal leading-relaxed">Upper Bicutan, Taguig City</h5>
+                            </div>
+                            <div class="w-full justify-between items-center inline-flex gap-4">
+                                <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Payment Method</h5>
+                                <h5 class="text-right text-gray-500 text-lg font-normal leading-relaxed">COD</h5>
+                            </div>
+                        </div>
+                        <div class="w-full md:px-6 px-2 flex-col justify-start items-start gap-5 inline-flex">
+                            <div class="w-full pb-6 border-b border-gray-200 flex-col justify-start items-start gap-6 flex">
+                                <div class="w-full justify-between items-start gap-6 inline-flex">
+                                    <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Subtotal</h5>
+                                    <h5 class="text-right text-gray-900 text-lg font-semibold leading-relaxed">₱1,048.00</h5>
+                                </div>
+                                <div class="w-full justify-between items-start gap-6 inline-flex">
+                                    <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Shipping</h5>
+                                    <h5 class="text-right text-gray-900 text-lg font-semibold leading-relaxed">₱20.00</h5>
+                                </div>
+                                <div class="w-full justify-between items-start gap-6 inline-flex">
+                                    <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Taxes</h5>
+                                    <h5 class="text-right text-gray-900 text-lg font-semibold leading-relaxed">₱22.00</h5>
+                                </div>
+                                <div class="w-full justify-between items-start gap-6 inline-flex">
+                                    <h5 class="text-gray-500 text-lg font-normal leading-relaxed">Discount</h5>
+                                    <h5 class="text-right text-red-600 text-lg font-semibold leading-relaxed">-₱12.00</h5>
+                                </div>
+                            </div>
+                            <div class="w-full justify-between items-start gap-6 inline-flex">
+                                <h4 class="text-green-600 text-xl font-semibold leading-8">Total</h4>
+                                <h4 class="text-right text-green-600 text-xl font-semibold leading-8">₱1,078.00</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full justify-center items-center gap-8 flex sm:flex-row flex-col">
+                    <button class="md:w-fit w-full px-5 py-2.5 bg-teal-100 hover:bg-teal-200 transition-all duration-700 ease-in-out rounded-xl justify-center items-center flex">
+                        <span class="px-2 py-px text-teal-600 text-base font-semibold leading-relaxed">Back to Shopping</span>
+                    </button>                
+                    <button class="md:w-fit w-full px-5 py-2.5 bg-orange-600 hover:bg-orange-800 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+                        <span class="px-2 py-px text-white text-base font-semibold leading-relaxed">Track My Order</span>
+                    </button>    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
