@@ -17,9 +17,21 @@
                             @shirt.Name
                         </h3>
 
-                        <p class="mt-2 font-semibold text-black">
-                            ₱@shirt.Price
-                        </p>
+                        <div class="flex items-center justify-between mt-2">
+                            <p class="mt-2 font-semibold text-black">
+                                ₱@shirt.Price
+                            </p>
+
+                            <div class="flex items-center gap-x-2">
+                                <span class="material-symbols-outlined text-gray-500 text-sm">
+                                    shopping_cart
+                                </span>
+
+                                <span class="material-icons text-red-500 text-sm">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <a class="after:absolute after:inset-0 after:z-1" href="#"></a>
@@ -50,25 +62,13 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="py-3 border-t border-gray-200">
-                            <div class="grid grid-cols-2 gap-2">
-                                <div>
-                                    <span class="font-medium text-black">Description</span>
-                                </div>
-
-                                <div class="text-end">
-                                    <span class="text-black">@shirt.Description</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="mt-auto">
-                    <a href="/checkout"
+                    <a href="/details"
                         class="py-2 px-3 w-full inline-flex justify-center items-center gap-x-2 text-md font-medium text-nowrap rounded-xl border border-transparent bg-orange-500 text-white hover:bg-orange-600 focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
-                        Checkout
+                        View Details
                     </a>
                 </div>
             </div>
@@ -77,12 +77,12 @@
 </div>
 
 @code {
-    record Product(string Name, string Color, int Quantity, string Description, string ImageUrl, double Price);
+    record Product(string Name, string Color, int Quantity, string ImageUrl, double Price);
 
     List<Product> products = new()
     {
-        new("Software Developer Shirt", "Black and White", 14, "Perfect for late night coding.", "images/shirt-1.webp", 499.00),
-        new("Software Engineer Shirt", "Black and White", 45, "Because you run on caffeine.", "images/shirt-7.webp", 549.00),
-        new("Web Developer Shirt", "Black and White", 32, "Stylish and nerdy.", "images/shirt-3.webp", 599.00)
+        new("Software Developer Shirt", "Black and White", 14, "images/shirt-1.webp", 499.00),
+        new("Software Engineer Shirt", "Black and White", 45, "images/shirt-7.webp", 549.00),
+        new("Web Developer Shirt", "Black and White", 32, "images/shirt-3.webp", 599.00)
     };
 }
