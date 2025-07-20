@@ -192,9 +192,79 @@
 </div>
 
 @code {
-    void SubmitOrder()
+    private CustomerDetails customer = new();
+    private ShippingDetails shipping = new();
+    private string selectedPaymentMethod = "Credit or Debit Card";
+    private string cardNumber, expiryDate, cvv;
+    private string discountCode;
+    private decimal appliedDiscount = 0;
+    private string discountMessage;
+
+    private List<CartItem> cart = new()
     {
-        NavigationManager.NavigateTo("/confirmation");
+        new() { Name = "Software Engineer Shirt", Price = 549, ImageUrl = "images/shirt-7.webp", Quantity = 1 },
+        new() { Name = "Software Developer Shirt", Price = 499, ImageUrl = "images/shirt-1.webp", Quantity = 1 }
+    };
+
+    private void IncreaseQty(CartItem item) => item.Quantity++;
+    private void DecreaseQty(CartItem item) { if (item.Quantity > 1) item.Quantity--; }
+    private void RemoveItem(CartItem item) => cart.Remove(item);
+    private decimal Subtotal => cart.Sum(i => i.Price * i.Quantity);
+    private decimal Discount => appliedDiscount;
+    private decimal Shipping => 20;
+    private decimal Tax => 22;
+    private decimal Total => Subtotal + Shipping + Tax - Discount;
+
+    private void ApplyDiscount()
+    {
+        if (!string.IsNullOrWhiteSpace(discountCode))
+        {
+            if (discountCode.ToLower() == "dev20")
+            {
+                appliedDiscount = 20;
+                discountMessage = "₱20 discount applied!";
+            }
+            else if (discountCode.ToLower() == "freebie")
+            {
+                appliedDiscount = Subtotal >= 1000 ? 50 : 0;
+                discountMessage = appliedDiscount > 0 ? "₱50 discount for orders over ₱1000!" : "Subtotal too low for 'freebie' code.";
+            }
+            else
+            {
+                appliedDiscount = 0;
+                discountMessage = "Invalid discount code.";
+            }
+        }
+        else
+        {
+            discountMessage = "Please enter a discount code.";
+        }
     }
-    [Inject] public NavigationManager NavigationManager { get; set; } = null!;
+
+    private void SubmitOrder() => Console.WriteLine("Order submitted!");
+
+    public class CustomerDetails
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+    }
+
+    public class ShippingDetails
+    {
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string PostalCode { get; set; }
+        public string Country { get; set; } = "Philippines";
+    }
+
+    public class CartItem
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string ImageUrl { get; set; }
+        public int Quantity { get; set; }
+    }
 }
