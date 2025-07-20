@@ -1,86 +1,88 @@
 @page "/products"
 
-<h2 class="text-2xl font-semibold mb-4">T-Shirt Designs</h2>
+<div class="py-10 lg:py-14 mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">T-Shirt Designs</h2>
 
-<div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-    @foreach (var shirt in products)
-    {
-        <div class="group flex flex-col">
-            <div class="relative">
-                <div class="aspect-4/4 overflow-hidden rounded-2xl">
-                    <img class="size-full object-cover rounded-2xl" src="@shirt.ImageUrl" alt="@shirt.Name" />
+    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        @foreach (var shirt in products)
+        {
+            <div class="group flex flex-col">
+                <div class="relative">
+                    <div class="aspect-4/4 overflow-hidden rounded-2xl">
+                        <img class="size-full object-cover rounded-2xl" src="@shirt.ImageUrl" alt="@shirt.Name" />
+                    </div>
+
+                    <div class="pt-4">
+                        <h3 class="font-medium md:text-lg text-black">
+                            @shirt.Name
+                        </h3>
+
+                        <p class="mt-2 font-semibold text-black">
+                            ₱@shirt.Price
+                        </p>
+                    </div>
+
+                    <a class="after:absolute after:inset-0 after:z-1" href="#"></a>
                 </div>
 
-                <div class="pt-4">
-                    <h3 class="font-medium md:text-lg text-black">
-                        @shirt.Name
-                    </h3>
+                <div class="mb-2 mt-4 text-sm">
+                    <div class="flex flex-col">
+                        <div class="py-3 border-t border-gray-200">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <span class="font-medium text-black">Colors:</span>
+                                </div>
 
-                    <p class="mt-2 font-semibold text-black">
-                        ₱@shirt.Price
-                    </p>
-                </div>
-
-                <a class="after:absolute after:inset-0 after:z-1" href="#"></a>
-            </div>
-
-            <div class="mb-2 mt-4 text-sm">
-                <div class="flex flex-col">
-                    <div class="py-3 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <span class="font-medium text-black">Colors:</span>
+                                <div class="text-end">
+                                    <span class="text-black">@shirt.Color</span>
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="text-end">
-                                <span class="text-black">@shirt.Color</span>
+                        <div class="py-3 border-t border-gray-200">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <span class="font-medium text-black">Quantity:</span>
+                                </div>
+
+                                <div class="flex justify-end">
+                                    <span class="text-black">@shirt.Quantity</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="py-3 border-t border-gray-200">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <span class="font-medium text-black">Description</span>
+                                </div>
+
+                                <div class="text-end">
+                                    <span class="text-black">@shirt.Description</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="py-3 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <span class="font-medium text-black">Quantity:</span>
-                            </div>
-
-                            <div class="flex justify-end">
-                                <span class="text-black">@shirt.Quantity</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="py-3 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <span class="font-medium text-black">Description</span>
-                            </div>
-
-                            <div class="text-end">
-                                <span class="text-black">@shirt.Description</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mt-auto">
+                    <a href="/checkout"
+                        class="py-2 px-3 w-full inline-flex justify-center items-center gap-x-2 text-md font-medium text-nowrap rounded-xl border border-transparent bg-orange-500 text-white hover:bg-orange-600 focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
+                        Checkout
+                    </a>
                 </div>
             </div>
-
-            <div class="mt-auto">
-                <a href="/checkout"
-                    class="py-2 px-3 w-full inline-flex justify-center items-center gap-x-2 text-md font-medium text-nowrap rounded-xl border border-transparent bg-green-500 text-white hover:bg-green-600 focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
-                    Checkout
-                </a>
-            </div>
-        </div>
-    }
+        }
+    </div>
 </div>
 
 @code {
-    record Product(string Name, string Color, int Quantity, string Description, string ImageUrl, decimal Price);
+    record Product(string Name, string Color, int Quantity, string Description, string ImageUrl, double Price);
 
     List<Product> products = new()
     {
-        new("Gamer Tee", "Black and White", 14, "Perfect for late night coding.", "images/shirt-1.webp", 499),
-        new("Coffee Coder", "Black and White", 45, "Because you run on caffeine.", "images/shirt-9.webp", 549),
-        new("Debug Mode", "Black and White", 32, "Stylish and nerdy.", "images/shirt-3.webp", 599)
+        new("Software Developer Shirt", "Black and White", 14, "Perfect for late night coding.", "images/shirt-1.webp", 499.00),
+        new("Software Engineer Shirt", "Black and White", 45, "Because you run on caffeine.", "images/shirt-7.webp", 549.00),
+        new("Web Developer Shirt", "Black and White", 32, "Stylish and nerdy.", "images/shirt-3.webp", 599.00)
     };
 }
