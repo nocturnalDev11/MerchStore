@@ -9,7 +9,9 @@
             </span>
         </button>
 
-        <span class="inline-flex lg:hidden items-center text-lg text-gray-500">Merch Store</span>
+        <span class="inline-flex lg:hidden items-center text-3xl font-extrabold  text-gray-500">
+            Merch Store
+        </span>
     </div>
 
     <div class="flex items-center">
@@ -20,7 +22,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                       d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
             </svg>
-            <span class="ms-2">Login</span>
+            <span class="ms-2">Logout</span>
         </NavLink>
     </div>
 </div>
@@ -36,28 +38,91 @@
             </svg>
         </button>
 
-        <span class="text-white text-lg">Merch Store</span>
+        <span class="text-white text-3xl font-extrabold px-3 py-2">Merch Store</span>
     </div>
 
-    <nav class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
-        <ul class="space-y-2 font-medium">
-            <NavLink href="" Match="NavLinkMatch.All"
-                     class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group"
-                     activeclassname="bg-white/30">
-                <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
-                    home
-                </span>
-                <span class="ms-3">Home</span>
-            </NavLink>
+<nav class="min-h-full px-3 py-4 overflow-y-auto bg-gray-800 flex flex-col">
+        <div>
+            <ul class="space-y-2 font-medium">
+                <NavLink href="" Match="NavLinkMatch.All"
+                         class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group"
+                         activeclassname="bg-white/30">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        home
+                    </span>
+                    <span class="ms-3">Home</span>
+                </NavLink>
 
-            <NavLink href="/products"
-                     class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
-                    shopping_bag
-                </span>
-                <span class="ms-3">Products</span>
-            </NavLink>
-        </ul>
+                <NavLink href="/products"
+                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        shopping_bag
+                    </span>
+                    <span class="ms-3">Products</span>
+                </NavLink>
+
+                <NavLink href="/products"
+                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <div class="flex items-center w-full">
+                        <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                            shopping_cart
+                        </span>
+                        <span class="ms-3">Cart</span>
+                    </div>
+                    <span class="bg-teal-600 px-2 py-1 text-sm rounded-full">2</span>
+                </NavLink>
+            </ul>
+
+            <div class="space-y-2 font-medium mt-4 border-t border-gray-500 pt-4">
+                <NavLink href="/about"
+                        class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        info
+                    </span>
+                    <span class="ms-3">About Us</span>
+                </NavLink>
+                <NavLink href="/contact"
+                        class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        contact_mail
+                    </span>
+                    <span class="ms-3">Contact</span>
+                </NavLink>
+                <NavLink href="/privacy"
+                        class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        privacy_tip
+                    </span>
+                    <span class="ms-3">Privacy Policy</span>
+                </NavLink>
+                <NavLink href="/terms"
+                        class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        gavel
+                    </span>
+                    <span class="ms-3">Terms of Service</span>
+                </NavLink>
+                <NavLink href="/help"
+                        class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        help
+                    </span>
+                    <span class="ms-3">Help</span>
+                </NavLink>
+                <NavLink href="/settings"
+                         class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                    <span class="material-symbols-outlined w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        settings
+                    </span>
+                    <span class="ms-3">Settings</span>
+                </NavLink>
+            </div>
+        </div>
+
+        <div class="mt-auto border-t border-gray-500 pt-4">
+            <p class="text-white text-sm font-semibold">Hello, User!</p>
+            <p class="text-gray-400 text-xs">Welcome back to Merch Store</p>
+        </div>
     </nav>
 </aside>
 
